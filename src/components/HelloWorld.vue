@@ -1,58 +1,118 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="site">
+    <div class="wrapper">
+      <div class="sidebar filters">
+        <div class="block">
+          <h3 class="title">TYPE</h3>
+          <ul>
+            <li><a href="#" class="checked">Lorem del Ces</a></li>
+            <li><a href="#">Ispum ce Peupil</a></li>
+            <li><a href="#">Lorem del Ces</a></li>
+            <li><a href="#">Ispum ce Peupil</a></li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3 class="title">Color</h3>
+          <ul>
+            <li><a href="#">Blue</a></li>
+            <li><a href="#" class="checked">Charcoal</a></li>
+            <li><a href="#">Green</a></li>
+            <li><a href="#">Red</a></li>
+          </ul>
+        </div>
+        <div class="block">
+          <h3 class="title">Size</h3>
+          <ul>
+            <li><a href="#">Petite</a></li>
+            <li><a href="#" class="checked">Medium</a></li>
+            <li><a href="#">Large</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="product-grid">
+       <productCard/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import productCard from './product_card'
+
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
-    msg: String
+    msg: String,
+  },
+  components: {
+    productCard,
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+.site {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 3%;
+  clear: both;
 }
-ul {
-  list-style-type: none;
+
+a,
+a:hover,
+a:active,
+a:focus {
+  color: #444;
+  text-decoration: none;
+}
+
+.sidebar,
+.product-grid {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 20px;
+  outline: none;
+}
+.sidebar {
+  width: 20%;
+  text-align: left;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10; 
+}
+.sidebar .block {
+  display: block;
+  margin-bottom: 40px;
+}
+.sidebar .block .title {
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 300;
+  padding: 4px 0;
+  margin: 4px 0;
+  border-bottom: 1px solid #000;
+}
+.sidebar .block ul {
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+.sidebar .block ul li {
+  margin: 5px 0;
 }
-a {
-  color: #42b983;
+.sidebar .block ul li a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+
+.product-grid {
+  display: flex;
+  width: 80%;
+  height:80vh;
 }
 </style>
