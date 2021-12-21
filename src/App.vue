@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav
-      class="navbar navbar-dark bg-dark justify-content-between flex-nowrap flex-row"
+      class="navbar navbar-dark bg-dark justify-content-between flex-wrap flex-row"
       style="position: fixed;  width:100%; top: 0;"
     >
       <div class="container">
@@ -17,5 +17,7 @@
     <router-view></router-view>
   </div>
 </template>
+
+
 
 <style scoped></style>

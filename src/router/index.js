@@ -6,8 +6,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'hello',
-    component: () => import('../components/HelloWorld.vue')
+    name: 'productList',
+    component: () => import('../components/product_list')
+  },
+  {
+    path: '/productPage',
+    name: 'productPage',
+    component: () => import('../components/product_page.vue')
   },
 ]
 

@@ -1,5 +1,6 @@
 <template>
   <div class="site">
+   <img src="https://ski-lakeridge.com/wp-content/uploads/banner-skiing-2.jpg" alt="Ski" id="banner_img"> 
     <div class="wrapper">
       <div class="sidebar filters">
         <div class="block">
@@ -40,7 +41,7 @@
 import productCard from './product_card'
 
 export default {
-  name: "HelloWorld",
+  name: "Product_list",
   props: {
     msg: String,
   },
@@ -53,7 +54,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .site {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 3%;
   clear: both;
@@ -67,9 +68,22 @@ a:focus {
   text-decoration: none;
 }
 
+#banner_img{
+  width:100%;
+  height: 400px;
+  position: relative;
+  bottom: 1px;
+  z-index: -1;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width:80%;
+  
+}
+
 .sidebar,
 .product-grid {
-  display: block;
   float: left;
   margin: 0;
   padding: 20px;
@@ -80,7 +94,7 @@ a:focus {
   text-align: left;
   position: sticky;
   position: -webkit-sticky;
-  top: 10; 
+  top: 0;
 }
 .sidebar .block {
   display: block;

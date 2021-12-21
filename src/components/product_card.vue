@@ -1,9 +1,9 @@
 <template>
   <div id="container">
-  <div id="content" v-for="products in products" :key="products.key">
-    <img :src="products.Image" alt="avatar" id="image">
-    <h1>{{products.Title}}</h1>
-    <h2>{{products.Price}}</h2>
+    <div id="content" v-for="products in products" :key="products.key">
+      <img :src="products.Image" alt="avatar" id="image" />
+      <h1>{{ products.Title }}</h1>
+      <h2>{{ products.Price }}</h2>
     </div>
   </div>
 </template>
@@ -40,30 +40,28 @@ export default {
 <style scoped>
 
 
-
-#container{
-     display: flex;
+#container {
+  display: flex;
   -webkit-display: box;
   -moz-display: box;
   -ms-display: flexbox;
   -webkit-display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  
 }
 
 #content {
-    margin: 20px;
-    background-color: #fff;
-    width: 300px;
-    height: fit-content;
-    text-align: center;
-    cursor: pointer;
+  margin: 20px;
+  background-color: #fff;
+  width: 300px;
+  height: fit-content;
+  text-align: center;
+  cursor: pointer;
 }
 
-#image{
-    width: 100%;
-    height: 500px;
+#image {
+  width: 100%;
+  height: 500px;
 }
 </style>
 v-for="products in product" :key="product.key"
