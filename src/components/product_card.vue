@@ -1,9 +1,11 @@
 <template>
   <div id="container">
     <div id="content" v-for="products in products" :key="products.key">
+    <router-link  :to="{name: 'productPage' , params : {id : products.ID}}" style=" color: inherit">
       <img :src="products.Image" alt="avatar" id="image" />
       <h1>{{ products.Title }}</h1>
       <h2>{{ products.Price }}</h2>
+      </router-link>
     </div>
   </div>
 </template>
@@ -30,6 +32,7 @@ export default {
           Price: doc.data().Price,
           Title: doc.data().Title,
           Image: doc.data().Image,
+          ID: doc.data().ID,
         });
       });
     });

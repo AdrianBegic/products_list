@@ -8,7 +8,7 @@
         <a class="navbar-brand float-left">SKI STORE</a>
         <ul class="nav navbar-nav flex-row float-right">
           <li class="nav-item">
-            <router-link class="nav-link" to="/">STUFF</router-link>
+            <router-link class="nav-link" to="/">HOME</router-link>
           </li>
         </ul>
       </div>
